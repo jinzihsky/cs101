@@ -10,13 +10,6 @@ typedef struct {
     int lotto_set[5][7];
 } lotto_record_t;
 
-void write_record(lotto_record_t record) {
-    FILE* fpk;
-    fpk = fopen("record.bin", "ab");
-    fwrite(&record, sizeof(lotto_record_t), 1, fpk);
-    fclose(fpk);
-}
-
 int cmpfunc (const void * a, const void * b) {
    return ( *(int*)a - *(int*)b );
 }
